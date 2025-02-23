@@ -382,8 +382,9 @@ body {
 
     .mobile-only {
         display: block;
-        height: auto;
-        max-height: 50vh;
+        height: 47vh;
+        object-fit: cover;
+        /* max-height: 50vh; */
         margin-bottom: 2rem;
     }
 
