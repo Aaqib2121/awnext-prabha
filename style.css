@@ -695,6 +695,7 @@ body {
 
 .stats {
     max-width: 95%;
+    margin-bottom: 20px;
 }
 
 /* Stats Section */
@@ -706,6 +707,7 @@ body {
     letter-spacing: 0%;
     color: var(--primary);
     text-align: left;
+    padding-top: 10px;
 }
 
 .stats_p {
@@ -714,11 +716,13 @@ body {
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0%;
+    padding-top: 10px;
 }
 
 .stat-box {
     text-align: left;
     justify-items: left;
+    padding-top: 10px;
 }
 
 .stat-item {
@@ -778,6 +782,7 @@ body {
 @media(max-width:992px) {
     .stats {
         padding: .5em 1em;
+        margin-bottom: 7px;
     }
 
     .stat-number {
@@ -822,6 +827,7 @@ body {
         font-size: 36px;
         line-height: 36px;
         letter-spacing: 0%;
+        padding: 0;
     }
 
     .stats_p {
@@ -829,6 +835,7 @@ body {
         font-size: 22px;
         line-height: 22px;
         letter-spacing: 0%;
+        padding: 0;
     }
 
     .custom-col {
