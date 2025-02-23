@@ -722,13 +722,13 @@ body {
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0%;
-    padding-top: 10px;
+    padding-top: 7px;
 }
 
 .stat-box {
     text-align: left;
     justify-items: left;
-    padding-top: 10px;
+    padding-top: 14px;
 }
 
 .stat-item {
