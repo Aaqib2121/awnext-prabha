@@ -44,13 +44,13 @@ body {
 }
 
 .navbar {
-    top: 1.8rem;
+    /* top: 1.8rem; */
     padding: 1rem;
-    /* max-width: 100%; */
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 0 4px 6px rgb(0 0 0 / .1);
     background: linear-gradient(90deg, #0081ff 0, rgba(19, 19, 67, .58) 45.5%, #0081ff 98.8%);
+    position: absolute;
 }
 
 .nav-item {
@@ -95,6 +95,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    z-index: -1;
 }
 
 .hero_h1 {
@@ -350,7 +351,7 @@ body {
     color: var(--primary);
     font-weight: 400;
     font-size: 52px;
-    line-height: 1.2;
+    line-height: 52px;
     text-align: left;
 }
 
@@ -713,7 +714,7 @@ body {
 }
 
 .stat-item {
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: 10px;
     text-align: left;
 }
@@ -792,6 +793,9 @@ body {
         letter-spacing: 0%;
     }
 
+    .state-label {
+        width: 100%;
+    }
 
     .stat-number {
         font-weight: 400;
