@@ -185,6 +185,7 @@ body {
         padding: 1rem;
         background: linear-gradient(90deg, #0081ff 0, rgba(19, 19, 67, .58) 45.5%, #0081ff 98.8%);
     }
+    
 
     .nav_logo {
         width: 95px;
@@ -212,6 +213,11 @@ body {
         margin-top: 0;
         padding: 2rem;
         background: linear-gradient(156.39deg, #2EA1FD -8.77%, rgba(218, 240, 255, .95) 53.46%, #2EA1FD 108.38%);
+    }
+
+    .btn-outline-light {
+        color: #fff;
+        margin-top: .6em;
     }
 }
 
@@ -1015,8 +1021,8 @@ body {
     line-height: 18px;
     letter-spacing: 0%;
     color: #fff;
-    width: 50%;
-    max-width: 300px;
+    width: 60%;
+    /* max-width: 300px; */
     border-radius: inherit;
 }
 
