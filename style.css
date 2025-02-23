@@ -51,6 +51,7 @@ body {
     box-shadow: 0 4px 6px rgb(0 0 0 / .1);
     background: linear-gradient(90deg, #0081ff 0, rgba(19, 19, 67, .58) 45.5%, #0081ff 98.8%);
     position: absolute;
+    z-index: 100;
 }
 
 .nav-item {
@@ -95,7 +96,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .hero_h1 {
@@ -527,22 +528,26 @@ body {
     flex: 1;
     font-weight: 300;
     font-size: 19px;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .card-body ul {
-    list-style-type: disc;
     padding-left: 1.5rem;
     margin-top: 1rem;
     text-align: left;
     flex: 1;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 1.5
+    font-size: 19px;
+    line-height: 1.5;
 }
 
-.card-body ul li {
-    margin-bottom: .5rem
+.card__text li {
+    margin-bottom: .5rem;
+    text-align: left;
+    flex: 1;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.5;
 }
 
 .scrollable-row {
@@ -992,20 +997,24 @@ body {
     background: linear-gradient(116.01deg, #0081ff -1.98%, #0272e6 .58%, #065cc0 5.72%, #09489e 11.7%, #0c3781 17.69%, #0e2a6a 24.53%, #101f58 32.23%, #12184c 41.64%, #121445 54.47%, #131343 83.55%);
     border: inherit;
     padding: .75rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0%;
     color: #fff;
     width: 50%;
     max-width: 300px;
-    border-radius: inherit
+    border-radius: inherit;
 }
 
 .call-btn {
     background: linear-gradient(94.11deg, #0080ff -3.32%, #add6ff 6.77%, #43a1ff 80.38%, #0080ff 104.52%);
     border: 0;
     padding: .75rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0%;
     color: #fff;
     width: 100%;
     max-width: 270px;
