@@ -877,7 +877,6 @@ body {
     border-radius: 8px;
     width: 70%;
     max-width: 470px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
     text-align: left;
     margin-top: -5em
 }
@@ -956,6 +955,10 @@ body {
 }
 
 @media (max-width:375px) {
+    .download {
+        height: 90vh
+    }
+
     .download_text {
         padding-left: .7em;
         font-size: 36px;
@@ -965,7 +968,7 @@ body {
     .download-form {
         width: 88%;
         padding: 1rem;
-        top: 5em
+        top: 7em
     }
 }
 
@@ -1127,7 +1130,7 @@ address p {
     .contact_head {
         font-size: 36px;
         line-height: 36px;
-        padding-top: 2.6em;
+        padding-top: 1.8em;
     }
 
     .contact_h4 {
