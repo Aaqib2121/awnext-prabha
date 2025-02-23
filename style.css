@@ -540,6 +540,7 @@ body {
     font-weight: 300;
     font-size: 19px;
     line-height: 1.5;
+    text-decoration: none;
 }
 
 .card__text li {
@@ -549,6 +550,7 @@ body {
     font-weight: 300;
     font-size: 19px;
     line-height: 1.5;
+    text-decoration: none;
 }
 
 .scrollable-row {
