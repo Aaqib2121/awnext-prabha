@@ -97,19 +97,22 @@ body {
     position: relative;
 }
 
-/* .hero_h1{font-size:clamp(1.8rem,4vw,52px);line-height:clamp(1.5rem,3.5vw,52px);white-space:normal;padding-top:clamp(1rem,4vw,6.6em);font-weight:400;max-width:90%;}  */
 .hero_h1 {
     line-height: 52px;
     text-align: left;
-    padding-top: 6.2em;
-    padding-left: .5em;
     font-size: 52px;
-    /* white-space: nowrap; */
     max-width: 100%;
     display: block;
     font-weight: 400;
     letter-spacing: 0%;
+    position: absolute;
+    /* Add this */
+    top: 9em;
+    /* Adjust this value to position the h1 */
+    z-index: 3;
+    /* Ensure it stays above other elements */
 }
+
 
 .hero_h4 {
     font-weight: 300;
@@ -197,13 +200,10 @@ body {
     }
 
     .hero_h1 {
+        top: 2rem;
+        font-size: 28px;
         line-height: 36px;
-        text-align: left;
-        padding-top: 2rem;
-        padding-left: .5em;
-        font-size: 32px;
-        max-width: 90%;
-        display: block;
+        position: relative;
     }
 
     .form-card {
@@ -824,12 +824,10 @@ body {
 .download {
     position: relative;
     width: 100%;
-    background-image: url(img/download_sec.png);
-    background-size: cover;
-    background-position: center;
+    background: url(img/download_sec.png) center/cover no-repeat;
     min-height: 60vh;
     display: flex;
-    object-fit: cover;
+    object-fit: cover
 }
 
 .download::before {
@@ -840,7 +838,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #fff0 0%, #000000 120%);
+    background: linear-gradient(180deg, #fff0 0%, #000 120%);
     z-index: 1
 }
 
@@ -854,7 +852,7 @@ body {
     border-radius: 8px;
     width: 70%;
     max-width: 470px;
-    box-shadow: 0 4px 6px rgb(0 0 0 / .1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
     text-align: left;
     margin-top: -5em
 }
@@ -866,8 +864,7 @@ body {
     font-weight: 400;
     font-size: 52px;
     line-height: 52px;
-    letter-spacing: 0%;
-
+    letter-spacing: 0
 }
 
 .button-container {
@@ -878,43 +875,37 @@ body {
 
 @media (max-width:992px) {
     .download {
-        height: auto;
-        padding: 4rem 0
+        height: 90vh
     }
 
     .download_text {
-        text-align: left;
-        font-size: 2.5rem;
-        padding-top: 4em;
-        /* margin-bottom: 2rem; */
+        font-size: 36px;
+        line-height: 36px;
+        position: absolute;
+        padding-top: 3em;
+        max-width: 100%
     }
 
     .download-form {
         padding: 1.5rem;
         max-width: 100%;
-        top: 7em;
-        /* left: -9em; */
+        top: 7em
     }
 }
 
 @media (max-width:768px) {
     .download {
-        min-height: 50vh
+        height: 70vh
     }
 
     .download_text {
-        margin-top: -2em;
-        font-weight: 400;
         font-size: 36px;
-        line-height: 36px;
-        letter-spacing: 0%;
+        line-height: 36px
     }
 
     .download-form {
         width: 80%;
-        margin-top: -3em;
-        /* right: 7em; */
-        /* left: -6em; */
+        margin-top: -3em
     }
 
     .btn-primary {
@@ -923,36 +914,33 @@ body {
 }
 
 @media (max-width:576px) {
+    .download {
+        height: 70vh
+    }
+
     .download_text {
-        font-weight: 400;
         font-size: 36px;
         line-height: 36px;
-        letter-spacing: 0%;
-        margin-top: 0;
-        text-align: left;
         padding-left: .7em
     }
 
     .download-form {
         width: 88%;
-        padding: 1rem;
-        /* left: -1.9em; */
+        padding: 1rem
     }
 }
 
-@media(max-width:375px) {
+@media (max-width:375px) {
     .download_text {
         padding-left: .7em;
-        font-weight: 400;
         font-size: 36px;
-        line-height: 36px;
-        letter-spacing: 0%;
+        line-height: 36px
     }
 
     .download-form {
         width: 88%;
         padding: 1rem;
-        top: 5em;
+        top: 5em
     }
 }
 
@@ -1110,7 +1098,7 @@ address p {
     .contact_head {
         font-size: 36px;
         line-height: 36px;
-        padding-top: 4em;
+        padding-top: 2.6em;
     }
 
     .contact_h4 {
