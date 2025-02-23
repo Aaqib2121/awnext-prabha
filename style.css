@@ -109,7 +109,7 @@ body {
     letter-spacing: 0%;
     position: absolute;
     /* Add this */
-    top: 9em;
+    top: 8em;
     /* Adjust this value to position the h1 */
     z-index: 3;
     /* Ensure it stays above other elements */
