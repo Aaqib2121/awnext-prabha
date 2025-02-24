@@ -13,6 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // ================== Navbar Scroll Handling ==================
+    document.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        const banner = document.querySelector(".hero");
+        const bannerEnd = banner.offsetTop + banner.offsetHeight;
+    
+        if (window.scrollY >= bannerEnd) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
     // ================== Reload Page Handling ==================
     document.querySelectorAll(".downloadBtn").forEach(function (button) {
         button.addEventListener("click", function () {
