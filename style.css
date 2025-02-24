@@ -360,7 +360,7 @@ body {
 .content_mobile{flex-direction:column}.content-text{order:2;text-align:left;margin-top:2em}}
 @media (max-width:768px){.content_head{font-size:32px;line-height:40px}
 .content-section{margin-top:80px;padding-top:4rem}
-.content_p{font-weight:300;font-size:22px;line-height:22px;letter-spacing:0}}
+.content_p{font-weight:300;font-size:22px;line-height:22px;letter-spacing:0;margin-bottom: 0;}}
 @media (max-width:540px){.content_head{font-size:32px;line-height:36px;margin-top:3rem}
 .content-section{padding-top:4rem}.content_p{font-weight:300;font-size:22px;line-height:22px;letter-spacing:0}
 .content-text{margin-top:1.5em}}
