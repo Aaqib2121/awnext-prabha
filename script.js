@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.classList.remove("scrolled");
         }
     });
+
     // ================== Reload Page Handling ==================
     document.querySelectorAll(".downloadBtn").forEach(function (button) {
         button.addEventListener("click", function () {
