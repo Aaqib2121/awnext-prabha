@@ -414,6 +414,31 @@ body {
 
 
 /* Main Carousel Navigation */
+
+.gallery_head{
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    /* color: var(--primary); */
+    text-align: left;
+    padding-top: 10px;
+}
+
+
+.gallery_head_span{
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 52px;
+    letter-spacing: 0%;
+    color: var(--primary);
+    text-align: left;
+    padding-top: 10px;
+}
+
+
 .custom-prev, .custom-next {
     position: absolute;
     top: 50%;
@@ -527,6 +552,21 @@ body {
         font-size: 16px;
         padding: 5px;
     }
+
+    .gallery_head{
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0%;
+    }
+    
+    
+    .gallery_head_span{
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0%;
+    }
+    
 }
 
 @media (max-width: 480px) {
