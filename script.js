@@ -114,6 +114,42 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", loadGoogleMap);
 });
 
+let mainCarousel = document.getElementById("thumbnaiExample");
+let thumbnails = document.querySelectorAll(".thumbnail");
+let thumbContainer = document.querySelector(".thumbnails");
+let thumbPrev = document.querySelector(".thumb-prev");
+let thumbNext = document.querySelector(".thumb-next");
+
+// Sync thumbnails with main slider
+mainCarousel.addEventListener("slid.bs.carousel", function (event) {
+    let index = event.to;
+    thumbnails.forEach((thumb) => thumb.classList.remove("active"));
+    thumbnails[index].classList.add("active");
+
+    // Auto-scroll thumbnails to center active item
+    let selectedThumbnail = thumbnails[index];
+    thumbContainer.scrollLeft = selectedThumbnail.offsetLeft - thumbContainer.offsetWidth / 2 + selectedThumbnail.offsetWidth / 2;
+});
+
+// Click thumbnail to change slide
+thumbnails.forEach((thumb, index) => {
+    thumb.addEventListener("click", function () {
+        let bsCarousel = bootstrap.Carousel.getInstance(mainCarousel);
+        bsCarousel.to(index);
+    });
+});
+
+// Thumbnail Next Button
+thumbNext.addEventListener("click", function () {
+    thumbContainer.scrollLeft += 150;
+});
+
+// Thumbnail Previous Button
+thumbPrev.addEventListener("click", function () {
+    thumbContainer.scrollLeft -= 150;
+});
+
+
 
 document.getElementById('play-button').addEventListener('click', function () {
     var video = document.getElementById('my-video');

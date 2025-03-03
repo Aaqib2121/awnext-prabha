@@ -413,6 +413,88 @@ body {
 .video-container img,.video-container video{height:480px;width:100%;aspect-ratio:16/9;object-fit:cover}}
 
 
+/* Main Carousel Navigation */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: 2px solid #333;
+    color: #333;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background: #fff;
+    color: black;
+    border-color: #fff;
+}
+
+.custom-prev {
+    left: -50px;
+}
+
+.custom-next {
+    right: -50px;
+}
+
+/* Thumbnail Slider */
+.thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    white-space: nowrap;
+    width: max-content;
+}
+
+/* Thumbnail Navigation Buttons */
+.thumb-prev, .thumb-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: 2px solid #333;
+    color: #333;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.thumb-prev:hover, .thumb-next:hover {
+    background: #0000;
+    color: white;
+    border-color: #0000;
+}
+
+.thumb-prev {
+    left: -40px;
+}
+
+.thumb-next {
+    right: -40px;
+}
+
+.thumbnails img {
+    width: 7%; /* Adjust the size */
+    height: auto;
+    padding: 5px;
+}
+
+
+
 .stats {
     max-width: 95%;
     margin-bottom: 20px;
