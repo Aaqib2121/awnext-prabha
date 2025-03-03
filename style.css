@@ -347,7 +347,7 @@ body {
 .desktop-cont{max-width:1400px;margin:0 auto}
 .content_mobile{display:flex;flex-wrap:wrap;align-items:stretch}
 .image{background-image:url("img/content_img.jpeg");background-size:cover;background-position:center;min-height:800px;height:100%;width:100%;min-width:49.2vw}
-.content-text{display:flex;flex-direction:column;justify-content:center;padding:0 15px;margin-top:3rem}
+.content-text{display:flex;flex-direction:column;justify-content:center;padding:0 15px;margin-top:3rem;padding-left: 4em;}
 .content_head{margin-bottom:1.5rem;color:var(--primary);font-weight:400;font-size:52px;line-height:52px;text-align:left}
 .content_p{max-width:80%;font-weight:300;font-size:24px;line-height:1.2;letter-spacing:0}
 .mobile-only{display:none}
@@ -357,13 +357,13 @@ body {
 .mobile-only{display:block;height:47vh;object-fit:cover;margin-bottom:1.5rem}
 .content_head{font-size:36px;line-height:44px;margin-top:2rem}
 .content_p{max-width:100%;font-weight:300;font-size:22px;line-height:22px;letter-spacing:0}
-.content_mobile{flex-direction:column}.content-text{order:2;text-align:left;margin-top:2em}}
+.content_mobile{flex-direction:column}.content-text{order:2;text-align:left;margin-top:2em;padding-left: 0;}}
 @media (max-width:768px){.content_head{font-size:32px;line-height:40px}
 .content-section{margin-top:80px;padding-top:4rem}
 .content_p{font-weight:300;font-size:22px;line-height:22px;letter-spacing:0;margin-bottom: 0;}}
 @media (max-width:540px){.content_head{font-size:32px;line-height:36px;margin-top:3rem}
 .content-section{padding-top:4rem}.content_p{font-weight:300;font-size:22px;line-height:22px;letter-spacing:0}
-.content-text{margin-top:1.5em}}
+.content-text{margin-top:1.5em;padding-left: 0;}}
 @media (max-width:375px){.content_head{font-size:32px;line-height:32px}
 .content-section{padding-top:6rem}
 .content_p{font-weight:300;font-size:20px;line-height:22px;letter-spacing:0}}
@@ -587,12 +587,12 @@ body {
 
 
 
+/* Stats Section */
 .stats {
     max-width: 95%;
     margin-bottom: 20px;
 }
 
-/* Stats Section */
 .stats_head {
     margin-bottom: 1rem;
     font-weight: 400;
@@ -620,7 +620,6 @@ body {
 }
 
 .stat-item {
-    /* padding: 1rem; */
     border-radius: 10px;
     text-align: left;
 }
@@ -632,6 +631,7 @@ body {
     line-height: 88px;
     letter-spacing: 0%;
     color: rgba(65, 64, 66, 1);
+    transition: transform 0.5s ease; /* Add transition for smooth movement */
 }
 
 .state-label {
@@ -642,11 +642,9 @@ body {
     display: flex;
     align-items: center;
     padding-right: 4em;
-    /* Space between number and border */
     border-right: 2px solid #000;
-    /* height: 127px; */
+    position: relative; /* Ensure the border stays in place */
 }
-
 
 /* Remove border after 87% ticker */
 .stat-item:last-child .stat_last {
@@ -680,7 +678,6 @@ body {
         padding-bottom: 30px;
     }
 }
-
 
 @media(max-width:992px) {
     .stats {
@@ -750,6 +747,7 @@ body {
         align-items: flex-start;
     }
 }
+
 
 .download {
     position: relative;
@@ -899,7 +897,9 @@ body {
     font-weight: 400;
     font-size: 76px;
     line-height: 76px;
-    letter-spacing: 0%
+    letter-spacing: 0%;
+    max-width: 90%;
+    padding-left: 2em;
 }
 
 .contact_h4 {
@@ -1006,8 +1006,11 @@ address p {
 
 @media(max-width:992px) {
     .contact_head {
-        font-size: 56px;
-        line-height: 56px
+        font-size: 30px;
+        line-height: 56px;
+        max-width: 100%;
+        padding-left: 0;
+        /* max-width: 100%; */
     }
 
     .contact_h4 {
@@ -1033,9 +1036,11 @@ address p {
 
 @media(max-width:576px) {
     .contact_head {
-        font-size: 36px;
-        line-height: 36px;
-        padding-top: 1.8em;
+        font-size: 30px;
+        line-height: 30px;
+        padding-top: 2em;
+        max-width: 100%;
+        padding-left: 0;
     }
 
     .contact_h4 {
@@ -1056,8 +1061,8 @@ address p {
 
 @media(max-width:375px) {
     .contact_head {
-        font-size: 36px;
-        line-height: 36px;
+        font-size: 28px;
+        line-height: 30px;
         padding-top: 2em;
     }
 
