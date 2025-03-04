@@ -1413,9 +1413,9 @@ address p {
 
 @media(max-width:576px) {
     .contact_head {
-        font-size: 30px;
+        font-size: 29px;
         line-height: 30px;
-        padding-top: 5rem;
+        padding-top: 4.4rem;
         max-width: 100%;
         padding-left: 0;
     }
