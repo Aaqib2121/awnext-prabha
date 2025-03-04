@@ -759,7 +759,6 @@ body {
 /* Main Carousel Navigation */
 
 .gallery_head {
-    margin-top: 1rem 0;
     /* margin-bottom: 1rem; */
     font-weight: 400;
     font-size: 52px;
@@ -767,19 +766,22 @@ body {
     letter-spacing: 0%;
     /* color: var(--primary); */
     text-align: left;
-    padding-top: 10px;
+    padding: 4rem 0;
 }
 
 
 .gallery_head_span {
-    margin-bottom: 1rem;
     font-weight: 400;
     font-size: 52px;
     line-height: 52px;
     letter-spacing: 0%;
     color: var(--primary);
     text-align: left;
-    padding-top: 10px;
+    /* padding: 2.7rem 0; */
+}
+
+.carousel{
+    padding: 1.5rem 0;
 }
 
 
@@ -821,6 +823,7 @@ body {
     justify-content: center;
     width: 100%;
     margin-top: 10px;
+    /* padding-top: 5rem; */
 }
 
 .thumbnails {
@@ -881,6 +884,9 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .gallery_sec {
+        padding: 3em 1em;
+    }
 
     .gallery_head,
     .gallery_head_span {
@@ -891,9 +897,9 @@ body {
         padding: 0;
     }
 
-    .thumbnails {
+    /* .thumbnails {
         max-width: 60%;
-    }
+    } */
 
     .thumb-prev,
     .thumb-next {
@@ -929,13 +935,13 @@ body {
         padding: 0;
     }
 
-    .thumbnails {
+    /* .thumbnails {
         max-width: 60%;
-    }
+    } */
 
     .thumbnail {
-        width: 38%;
-        height: 9vh;
+        width: 42%;
+        height: 10vh;
         object-fit: cover;
     }
 
@@ -1059,9 +1065,9 @@ body {
 }
 
 @media(max-width:576px) {
-    .stats {
+    /* .stats {
         padding: 3em 1em;
-    }
+    } */
 
     .stats_h5 {
         font-weight: 400;
@@ -1212,7 +1218,7 @@ body {
     .download_text {
         font-size: 36px;
         line-height: 36px;
-        padding-left: .7em
+        padding-left: 0.7em
     }
 
     .download-form {
@@ -1409,7 +1415,7 @@ address p {
     .contact_head {
         font-size: 30px;
         line-height: 30px;
-        padding-top: 2em;
+        padding-top: 5rem;
         max-width: 100%;
         padding-left: 0;
     }
@@ -1422,7 +1428,7 @@ address p {
         padding-left: 1rem;
     }
 
-    .cont_add{
+    .cont_add {
         padding-left: .8rem;
     }
 
