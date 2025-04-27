@@ -1,513 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awnext by Prabha</title>
-    <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractional CMO</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <span class="logo-text">Fractional CMO</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <button class="btn-close d-lg-none" aria-label="Close menu" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"></button>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary nav-btn" href="#contact">Schedule a Call</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<body>
-
-
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark gradient-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <div class="logo d-flex align-items-center">
-                        <!-- Default Logo -->
-                        <div class="logo-default">
-                            <svg class="logo_svg"  viewBox="0 0 148 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M87.5775 44.6327C87.5775 46.1334 86.5322 47.0417 84.5787 47.0417H81.1771V38.206H84.1496C85.9978 38.206 87.122 38.9958 87.122 40.5624C87.122 41.8208 86.2505 42.2763 85.7556 42.3711V42.3974C86.3585 42.5185 87.5775 43.0661 87.5775 44.6327ZM83.989 39.2381H82.3961V42.0236H84.1627C85.3133 42.0236 85.8898 41.4075 85.8898 40.6308C85.8898 39.7067 85.3133 39.2381 83.989 39.2381ZM86.3585 44.5116C86.3585 43.4005 85.4344 42.9319 84.2707 42.9319H82.3961V46.0122H84.4313C85.5291 46.0122 86.3585 45.5436 86.3585 44.5116Z" fill="white"/>
-                                <path d="M92.3164 43.8035V47.0445H91.0974V43.872L88.0039 38.2088H89.315L91.2554 41.7025C91.5239 42.1843 91.6714 42.6135 91.7109 42.8136H91.7372C91.7635 42.6135 91.911 42.1843 92.1795 41.7025L94.1067 38.2088H95.3652L92.3138 43.8061L92.3164 43.8035Z" fill="white"/>
-                                <path d="M105.639 41.1917C105.639 43.1058 104.433 44.1905 102.319 44.1905H100.605V47.0418H99.3856V38.2061H102.171C104.38 38.2061 105.639 39.2777 105.639 41.1917ZM104.406 41.1917C104.406 39.9464 103.577 39.2355 102.09 39.2355H100.605V43.1584H102.132C103.59 43.1584 104.406 42.4476 104.406 41.1891V41.1917Z" fill="white"/>
-                                <path d="M113.9 47.0576C113.9 47.0576 113.566 47.1235 113.176 47.1235C110.699 47.1235 111.436 43.6429 109.132 43.6429H108.421V47.0445H107.202V38.2088H109.867C111.928 38.2088 113.108 39.0381 113.108 40.9522C113.108 42.1843 112.291 43.04 111.125 43.4297C112.263 44.0721 112.276 46.1467 113.534 46.1467C113.695 46.1467 113.803 46.1204 113.803 46.1204L113.897 47.0576H113.9ZM109.696 42.6925C110.941 42.6925 111.878 42.0764 111.878 40.9522C111.878 39.828 111.154 39.2382 109.817 39.2382H108.424V42.6925H109.696Z" fill="white"/>
-                                <path d="M120.058 44.8487H116.349L115.533 47.0445H114.274L117.594 38.2088H118.813L122.133 47.0445H120.874L120.058 44.8487ZM119.684 43.843L118.492 40.6442C118.397 40.3888 118.305 40.0676 118.21 39.72H118.184C118.089 40.0676 117.997 40.3888 117.902 40.6442L116.723 43.843H119.682H119.684Z" fill="white"/>
-                                <path d="M129.86 44.6328C129.86 46.1335 128.815 47.0418 126.861 47.0418H123.46V38.2061H126.432C128.28 38.2061 129.405 38.996 129.405 40.5625C129.405 41.8209 128.533 42.2764 128.038 42.3712V42.3975C128.641 42.5186 129.86 43.0663 129.86 44.6328ZM126.272 39.2382H124.679V42.0237H126.445C127.596 42.0237 128.173 41.4076 128.173 40.6309C128.173 39.7068 127.596 39.2382 126.272 39.2382ZM128.641 44.5117C128.641 43.4006 127.717 42.932 126.553 42.932H124.679V46.0124H126.714C127.812 46.0124 128.641 45.5437 128.641 44.5117Z" fill="white"/>
-                                <path d="M138.79 38.2061V47.0418H137.572V42.9715H132.819V47.0418H131.6V38.2061H132.819V41.9421H137.572V38.2061H138.79Z" fill="white"/>
-                                <path d="M145.899 44.8487H142.19L141.373 47.0445H140.115L143.435 38.2088H144.654L147.974 47.0445H146.715L145.899 44.8487ZM145.525 43.843L144.333 40.6442C144.238 40.3888 144.146 40.0676 144.051 39.72H144.025C143.93 40.0676 143.838 40.3888 143.743 40.6442L142.563 43.843H145.523H145.525Z" fill="white"/>
-                                <path d="M59.2773 8.67127H66.7834V12.3256C68.084 9.67436 70.4877 8.07099 73.7893 8.07099C78.9443 8.07099 82.0457 11.5252 82.0457 18.0309V32.2927H74.4396V18.5811C74.4396 15.6297 73.3891 14.1264 70.8853 14.1264C68.3815 14.1264 66.8308 16.1774 66.8308 19.9317V32.2927H59.2747V8.67127H59.2773Z" fill="white"/>
-                                <path d="M108.619 22.4829V20.632C108.619 12.8758 104.267 8.12097 96.7079 8.12097C90.9921 8.12097 86.727 11.1408 85.1105 16.0088C84.6445 17.4068 84.397 18.9576 84.397 20.632C84.397 28.0881 89.0992 32.7929 96.858 32.7929C102.7 32.7929 106.112 30.6814 107.968 27.1824L102.276 24.3995C101.502 26.1214 99.9673 27.3878 97.1608 27.3878C94.0593 27.3878 92.0558 25.737 91.7556 22.4829H108.619ZM96.6079 13.376C99.5092 13.376 101.06 14.9768 101.213 18.1309H91.653C92.0531 15.0768 93.9066 13.376 96.6079 13.376Z" fill="white"/>
-                                <path d="M116.125 20.4319L108.569 8.67123H116.975L120.98 15.377L125.132 8.67123H132.19L124.531 19.8317L132.69 32.2927H124.231L119.729 24.8366L115.124 32.2927H107.968L116.125 20.4319Z" fill="white"/>
-                                <path d="M136.492 25.5369V14.0263H133.291V8.67117H136.492V4.01902L143.848 0.414719V8.67117H147.992V14.0263H143.798V25.1867C143.798 26.2372 144.348 26.7374 145.399 26.7374H148V32.2926H142.395C137.54 32.1425 136.489 29.6914 136.489 25.5369" fill="white"/>
-                                <path d="M20.9939 8.67123H28.7501L32.4545 22.4329L36.5063 8.67123H43.112L47.1165 22.4829L50.7208 8.67123H57.5266L50.0205 32.2927H43.5148L39.2602 17.4305L35.0557 32.2927H28.5L20.9939 8.67123Z" fill="white"/>
-                                <path d="M16.5314 32.2927L9.02527 8.67123H16.7841L24.2929 32.2927H16.5314Z" fill="white"/>
-                                <path d="M12.3004 17.994L7.75885 32.2927H0L3.11723 22.4829L12.3004 17.994Z" fill="white"/>
-                            </svg>
-                        </div>
-                        <!-- Scrolled Logo (initially hidden) -->
-                        <div class="logo-scrolled">
-                            <svg class="logo_svg"  viewBox="0 0 148 47" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_555_25)">
-                                <path d="M87.5757 44.2162C87.5757 45.7137 86.5287 46.6275 84.5742 46.6275H81.173V37.7881H84.1427C85.9893 37.7881 87.1125 38.5749 87.1125 40.1423C87.1125 41.3987 86.2431 41.8556 85.7482 41.9508V41.9762C86.351 42.0967 87.5693 42.6488 87.5693 44.2098L87.5757 44.2162ZM83.9904 38.8224H82.3977V41.6081H84.1681C85.3167 41.6081 85.8941 40.9926 85.8941 40.2184C85.8941 39.292 85.3167 38.8288 83.9904 38.8288V38.8224ZM86.3573 44.0956C86.3573 42.9851 85.4309 42.5156 84.2696 42.5156H82.3977V45.5932H84.4346C85.5324 45.5932 86.3637 45.1236 86.3637 44.0956H86.3573Z" fill="#131343"/>
-                                <path d="M92.3159 43.3912V46.6339H91.0975V43.461L88.0072 37.7944H89.3207L91.2625 41.2909C91.529 41.7731 91.675 42.1983 91.7194 42.4013H91.7448C91.7701 42.1983 91.9161 41.7731 92.189 41.2909L94.118 37.7944H95.3745L92.3222 43.3912H92.3159Z" fill="#131343"/>
-                                <path d="M105.642 40.7769C105.642 42.6932 104.436 43.7783 102.323 43.7783H100.61V46.6275H99.3912V37.7881H102.177C104.385 37.7881 105.642 38.8605 105.642 40.7769ZM104.411 40.7769C104.411 39.5331 103.579 38.8224 102.094 38.8224H100.61V42.744H102.139C103.598 42.744 104.417 42.0333 104.417 40.7769H104.411Z" fill="#131343"/>
-                                <path d="M113.897 46.6402C113.897 46.6402 113.561 46.71 113.174 46.71C110.699 46.71 111.435 43.2263 109.132 43.2263H108.421V46.6275H107.203V37.7881H109.868C111.93 37.7881 113.11 38.6194 113.11 40.5357C113.11 41.7668 112.292 42.6234 111.131 43.0105C112.266 43.6514 112.279 45.7264 113.542 45.7264C113.701 45.7264 113.808 45.701 113.808 45.701L113.904 46.6402H113.897ZM109.696 42.2744C110.94 42.2744 111.879 41.6589 111.879 40.5357C111.879 39.4126 111.156 38.8224 109.817 38.8224H108.427V42.2744H109.696Z" fill="#131343"/>
-                                <path d="M120.059 44.4319H116.353L115.534 46.6275H114.278L117.597 37.7881H118.815L122.134 46.6275H120.877L120.059 44.4319ZM119.684 43.4293L118.491 40.2311C118.396 39.9773 118.301 39.6537 118.212 39.3047H118.187C118.092 39.6537 117.996 39.9773 117.908 40.2311L116.727 43.4293H119.684Z" fill="#131343"/>
-                                <path d="M129.863 44.2162C129.863 45.7137 128.816 46.6275 126.861 46.6275H123.46V37.7881H126.43C128.276 37.7881 129.4 38.5749 129.4 40.1423C129.4 41.3987 128.53 41.8556 128.035 41.9508V41.9762C128.638 42.0967 129.856 42.6488 129.856 44.2098L129.863 44.2162ZM126.271 38.8224H124.678V41.6081H126.449C127.597 41.6081 128.175 40.9926 128.175 40.2184C128.175 39.292 127.597 38.8288 126.271 38.8288V38.8224ZM128.644 44.0956C128.644 42.9851 127.718 42.5156 126.557 42.5156H124.685V45.5932H126.722C127.82 45.5932 128.651 45.1236 128.651 44.0956H128.644Z" fill="#131343"/>
-                                <path d="M138.791 37.7944V46.6339H137.573V42.5663H132.82V46.6339H131.601V37.7944H132.82V41.532H137.573V37.7944H138.791Z" fill="#131343"/>
-                                <path d="M145.898 44.4319H142.192L141.374 46.6275H140.117L143.436 37.7881H144.654L147.973 46.6275H146.717L145.898 44.4319ZM145.524 43.4293L144.331 40.2311C144.236 39.9773 144.14 39.6537 144.052 39.3047H144.026C143.931 39.6537 143.836 39.9773 143.747 40.2311L142.567 43.4293H145.524Z" fill="#131343"/>
-                                <path d="M59.2743 8.25563H66.7811V11.9107C68.082 9.25823 70.487 7.65914 73.7867 7.65914C78.9393 7.65914 82.0423 11.1112 82.0423 17.6154V31.8803H74.4339V18.1675C74.4339 15.2168 73.3806 13.7128 70.8804 13.7128C68.3802 13.7128 66.8256 15.7625 66.8256 19.5191V31.8803H59.2679V8.25563H59.2743Z" fill="#0081FF"/>
-                                <path d="M108.618 22.07V20.2171C108.618 12.4628 104.265 7.70357 96.707 7.70357C90.9896 7.70357 86.7253 10.7241 85.1072 15.5912C84.644 16.9872 84.3965 18.5419 84.3965 20.2171C84.3965 27.6732 89.0986 32.3753 96.8593 32.3753C102.697 32.3753 106.117 30.2622 107.97 26.7658L102.278 23.98C101.504 25.6997 99.9686 26.9688 97.1638 26.9688C94.0608 26.9688 92.062 25.319 91.7574 22.0637H108.624L108.618 22.07ZM96.6118 12.9641C99.5117 12.9641 101.066 14.5632 101.212 17.7169H91.6559C92.0556 14.6647 93.9085 12.9641 96.6118 12.9641Z" fill="#0081FF"/>
-                                <path d="M116.125 20.0204L108.567 8.25563H116.975L120.979 14.9629L125.135 8.25563H132.192L124.532 19.4175L132.693 31.8803H124.234L119.729 24.4242L115.128 31.8803H107.97L116.125 20.0204Z" fill="#0081FF"/>
-                                <path d="M136.494 25.1223V13.6113H133.289V8.25563H136.494V3.6043L143.849 0V8.25563H147.992V13.6113H143.798V24.7732C143.798 25.8266 144.35 26.3216 145.397 26.3216H147.999V31.874H142.395C137.541 31.7217 136.488 29.2723 136.488 25.1159" fill="#0081FF"/>
-                                <path d="M20.9912 8.25563H28.7519L32.4514 22.0192L36.5062 8.25563H43.112L47.1161 22.07L50.7204 8.25563H57.5292L50.0224 31.8803H43.5118L39.2602 17.0126L35.0594 31.8803H28.4981L20.9912 8.25563Z" fill="#0081FF"/>
-                                <path d="M16.5303 31.8803L9.02344 8.25563H16.7841L24.291 31.8803H16.5303Z" fill="#0081FF"/>
-                                <path d="M12.2978 17.5837L7.76067 31.8803H0L3.11569 22.07L12.2978 17.5837Z" fill="#0081FF"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_555_25">
-                                <rect width="148.005" height="46.71" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>                                
-                            <!-- <img src="img/Awnext_01.png" height="70" alt="Scrolled Logo" class="scrolled-logo"> -->
-                        </div>
-                    </div>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#about">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#why">Why Awnext?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#advantage">The Prabha Advantage</a>
-                        </li>
-                    </ul>
-                    <a class="btn btn-outline-light" href="#get_contact">Partner with Us</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero d-flex">
-            <div class="container hero_conatiner">
-                <div class="row hero_head justify-content-center align-items-center">
-                    <div class="col-lg-6 text-lg-start text-white">
-                        <h1 class="hero_h1">India’s first OEM<br>for motorized awnings</h1>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="banner-form mx-auto">
-                            <div class="form-card bg-white">
-                                <h2 class="mb-3 hero_h2 text-dark">Upgrade to Smart Awning Solutions</h2>
-                                <h5 class="mb-4 hero_h4 text-dark">Smart, smooth, and silent—experience Awnext today!</h5>
-                                <form method="post" action="">
-                                    <?php wp_nonce_field('form_submission_nonce', 'form_nonce'); ?>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control" name="full_name" placeholder="Full Name *" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="email" class="form-control" name="email" placeholder="Email *" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="tel" class="form-control" name="phone_number" placeholder="Phone Number *" required>
-                                    </div>
-                                    <!-- Button to trigger download action -->
-                                    <div class="button-container">
-                                        <button type="submit" name="submit" class="downloadBtn btn btn-primary">Connect with us</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <section class="content-section" id="about">
-        <div class="container-fluid desktop-cont">
-            <div class="row align-items-center content_mobile">
-                <!-- Left Side: Text Content -->
-                <div class="col-lg-6 py-5 pe-lg-5 content-text">
-                    <h2 class="content_head">Motorised Awnings<br> built to last</h2>
-                    <img src="img/content_img.jpeg" class="content_img mobile-only" width="100%" alt="Right Side Image">
-                    <p class="content_p">Awnext by Prabha redefines outdoor luxury as the first organized player in motorized awnings with nationwide distribution. Precision-engineered for durability, style, and effortless protection against harsh weather.</p>
-                </div>
-                <!-- Right Side: Image -->
-                <div class="col-lg-6 position-lg-absolute right-half h-100 desktop-only">
-                    <div class="image"></div>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content fade-in">
+          <h1 class="display-4 fw-bold mb-4">Grow Your Business With Strategic Marketing Leadership</h1>
+          <p class="lead mb-5">Expert CMO services without the full-time commitment. Drive results with data-driven strategies customized for your business goals.</p>
+          <div class="cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg me-3 mb-3 mb-md-0">Let's Talk Strategy</a>
+            <a href="#services" class="btn btn-outline-light btn-lg">Explore Services</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="why">
-        <div class="container">
-            <h2 class="features_head text-left pb-4 pt-4 text-dark">Why Awnext by Prabha?</h2>
-            <div class="row flex-nowrap overflow-auto g-4 pb-3 scrollable-row">
-                <!-- Feature Cards -->
-                <div class="col-12 col-sm-6 col-xl-4 flex-shrink-0">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-img-container feature-icon">
-                            <img src="img/india_map.png" alt="Pan India Coverage">
-                        </div>
-                        <div class="card-body">
-                            <div class="card__title feature_h3">Pan-India’s First Motorized Awning Manufacturer</div>
-                            <div class="card__text">As India’s first OEM awning brand, we deliver premium motorized retractable awnings to Mumbai, Pune, and nationwide.</div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-4 flex-shrink-0">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-img-container feature-icon">
-                            <img src="img/luxury_meet.png" alt="Luxury Meets Affordability">
-                        </div>
-                        <div class="card-body">
-                            <div class="card__title feature_h3">Luxury Meets Affordability</div>
-                            <div class="card__text pt-2"> 
-                                <div class="pt-4">Premium features at manual prices:</div>
-                                <ul>
-                                    <li>Smart remote-controlled operation</li>
-                                    <li>UV-resistant, weatherproof fabrics</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-4 flex-shrink-0">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-img-container feature-icon">
-                            <img src="img/cust_space.png" alt="Customizable for Your Space">
-                        </div>
-                        <div class="card-body">
-                            <div class="card__title feature_h3">Customizable for Your Space</div>
-                            <div class="card__text pt-4"> 
-                                <div class="feature_p pt-2">Design awnings tailored to your exact needs:</div>
-                                <ul>
-                                    <li>Size, color, and fabric customization</li>
-                                    <li>Quick installation for homes, cafés, and commercial spaces</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-4 flex-shrink-0">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-img-container feature-icon">
-                            <img src="img/support-icon.png" alt="Exceptional Customer Support">
-                        </div>
-                        <div class="card-body">
-                            <div class="card__title feature_h3">Your Space,Your Style</div>
-                            <div class="card__text pt-4">Our awnings are customizable to fit your exact needs, and they are easy to install so you can enjoy your outdoor space sooner.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-xl-4 flex-shrink-0">
-                    <div class="card feature-card shadow-sm">
-                        <div class="card-img-container feature-icon">
-                            <img src="img/sixty-icon.png" alt="60-Day Satisfaction Guarantee">
-                        </div>
-                        <div class="card-body">
-                            <div class="card__title feature_h3">60 Years of Excellence</div>
-                            <div class="card__text pt-4">With over 60 years of experience, Prabha Engineering has established itself as a trusted leader in the industry, delivering quality and innovation that you can rely on.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-lg-6 hero-image fade-in-right">
+          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Strategic Marketing Leadership" class="img-fluid rounded-3 shadow-lg">
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
 
-
-    <section class="why-awnext">
-        <div class="container-fluid awnext_video">
-            <!-- Video Thumbnail -->
-            <div class="video-container col-md-12">
-                <img src="img/Thumbnai.jpeg" alt="Video Thumbnail"
-                    id="video-thumbnail" style="cursor: pointer;">
-
-                <!-- Play Button (Over Thumbnail) -->
-                <div id="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                            width: 80px; height: 80px; background: url('img/play-button.png') no-repeat center center;
-                            background-size: contain; cursor: pointer;">
-                </div>
-
-                <!-- Hidden Video -->
-                <video id="my-video" controls style="display: none; ">
-                    <source src="img/Awaning_main_video_v03.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+  <!-- About Section -->
+  <section id="about" class="py-6">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h6 class="text-primary text-uppercase mb-3 fade-in">About Me</h6>
+          <h2 class="section-title mb-4 fade-in">Delivering CMO-Level Expertise On Your Terms</h2>
         </div>
-    </section>
-
-    <section class="gallery_sec" id="advantage">
-        <div class="container">
-            <!-- Main Image Slider -->
-            <h2 class="gallery_head text-left pb-4">One awning, <span class="gallery_head_span">endless possibilities.</span></h2>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-5 mb-lg-0 fade-in-left">
+          <div class="about-image-wrap">
+            <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Fractional CMO - Fractional CMO" class="img-fluid rounded-3 shadow-lg">
+          </div>
+        </div>
+        <div class="col-lg-7 fade-in-right">
+          <div class="about-content ps-lg-5">
+            <p class="lead mb-4">As a Fractional CMO with over 15 years of experience, I've helped businesses across tech, SaaS, e-commerce, and healthcare achieve sustainable growth through strategic marketing leadership.</p>
             
-            <div id="thumbnaiExample" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/compressed_images/image_1.png" class="d-block w-100" alt="Slide 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_2.png" class="d-block w-100" alt="Slide 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_3.png" class="d-block w-100" alt="Slide 3">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_4.png" class="d-block w-100" alt="Slide 4">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_5.png" class="d-block w-100" alt="Slide 5">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_6.png" class="d-block w-100" alt="Slide 6">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_7.png" class="d-block w-100" alt="Slide 7">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_8.png" class="d-block w-100" alt="Slide 8">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_9.png" class="d-block w-100" alt="Slide 9">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_10.png" class="d-block w-100" alt="Slide 10">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_11.png" class="d-block w-100" alt="Slide 11">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_12.png" class="d-block w-100" alt="Slide 12">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_13.png" class="d-block w-100" alt="Slide 13">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_14.png" class="d-block w-100" alt="Slide 14">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_15.png" class="d-block w-100" alt="Slide 15">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_16.png" class="d-block w-100" alt="Slide 16">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_17.png" class="d-block w-100" alt="Slide 17">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_18.png" class="d-block w-100" alt="Slide 18">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_19.png" class="d-block w-100" alt="Slide 19">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_20.png" class="d-block w-100" alt="Slide 20">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/compressed_images/image_21.png" class="d-block w-100" alt="Slide 21">
-                    </div>
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="feature-item mb-4">
+                  <div class="icon-box mb-3">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h5>Data-Driven Approach</h5>
+                  <p>Marketing decisions backed by analytics and performance metrics</p>
                 </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item mb-4">
+                  <div class="icon-box mb-3">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                  <h5>Growth Focused</h5>
+                  <p>Strategies designed to drive sustainable business expansion</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item mb-4">
+                  <div class="icon-box mb-3">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h5>Team Leadership</h5>
+                  <p>Experience managing and developing high-performing marketing teams</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item">
+                  <div class="icon-box mb-3">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <h5>Industry Network</h5>
+                  <p>Connections with top agencies, specialists, and marketing vendors</p>
+                </div>
+              </div>
             </div>
+            
+            <div class="d-flex flex-wrap">
+              <a href="#services" class="btn btn-primary me-3 mb-3">View My Services</a>
+              <a href="#contact" class="btn btn-outline-light mb-3">Get In Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-6 bg-darker">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h6 class="text-primary text-uppercase mb-3 fade-in">Services</h6>
+          <h2 class="section-title mb-4 fade-in">Strategic Marketing Solutions</h2>
+          <p class="lead fade-in">Custom marketing leadership and execution to help you achieve your business goals</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4 fade-in-up" data-delay="100">
+          <div class="service-card h-100">
+            <div class="icon-wrap mb-4">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h4 class="mb-3">Marketing Strategy</h4>
+            <p>Comprehensive marketing strategy development aligned with your business objectives, from market positioning to channel selection and budget allocation.</p>
+            <ul class="service-list">
+              <li>Brand Positioning & Messaging</li>
+              <li>Go-to-Market Planning</li>
+              <li>Channel Strategy & Optimization</li>
+              <li>Budget Planning & ROI Tracking</li>
+            </ul>
+            <a href="#contact" class="btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
+        </div>
         
-            <!-- Thumbnail Slider with External Navigation -->
-            <div class="thumbnail-container mt-3">
-                <!-- Custom Previous Button (Outside Thumbnail) -->
-                <button class="thumb-prev"><i class="fa-solid fa-angle-left"></i></button>
-                
-                <div class="thumbnails">
-                    <img src="img/compressed_images/image_1.png" class="thumbnail active" data-bs-target="#thumbnaiExample" data-bs-slide-to="0">
-                    <img src="img/compressed_images/image_2.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="1">
-                    <img src="img/compressed_images/image_3.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="2">
-                    <img src="img/compressed_images/image_4.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="3">
-                    <img src="img/compressed_images/image_5.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="4">
-                    <img src="img/compressed_images/image_6.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="5">
-                    <img src="img/compressed_images/image_7.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="6">
-                    <img src="img/compressed_images/image_8.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="7">
-                    <img src="img/compressed_images/image_9.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="8">
-                    <img src="img/compressed_images/image_10.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="9">
-                    <img src="img/compressed_images/image_11.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="10">
-                    <img src="img/compressed_images/image_12.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="11">
-                    <img src="img/compressed_images/image_13.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="12">
-                    <img src="img/compressed_images/image_14.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="13">
-                    <img src="img/compressed_images/image_15.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="14">
-                    <img src="img/compressed_images/image_16.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="15">
-                    <img src="img/compressed_images/image_17.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="16">
-                    <img src="img/compressed_images/image_18.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="17">
-                    <img src="img/compressed_images/image_19.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="18">
-                    <img src="img/compressed_images/image_20.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="19">
-                    <img src="img/compressed_images/image_21.png" class="thumbnail" data-bs-target="#thumbnaiExample" data-bs-slide-to="20">
-                </div>
-                
-                <!-- Custom Next Button (Outside Thumbnail) -->
-                <button class="thumb-next"><i class="fa-solid fa-angle-right"></i></button>
+        <div class="col-md-4 fade-in-up" data-delay="300">
+          <div class="service-card h-100">
+            <div class="icon-wrap mb-4">
+              <i class="fas fa-users-cog"></i>
             </div>
+            <h4 class="mb-3">Team Leadership</h4>
+            <p>Executive leadership for your marketing department, including team building, process development, and performance management.</p>
+            <ul class="service-list">
+              <li>Marketing Team Assessment</li>
+              <li>Performance Management</li>
+              <li>Agency & Vendor Management</li>
+              <li>Process Optimization</li>
+            </ul>
+            <a href="#contact" class="btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats" id="advantage">
-        <div class="container py-3">
-            <h2 class="stats_head text-left pb-2">The Prabha Advantage</h2>
-            <p class="lead  stats_p text-left">Partnering with Prabha Engineering means decades of innovation,
-                reliability, and a
-                trusted ally for your success.</p>
-
-            <!-- Row for Stats -->
-            <div class="row text-left stat-row">
-                <!-- Column 1 -->
-                <div class="col-md-3 col-6 stat-box">
-                    <div class="stat-item">
-                        <div class="stat-number-wrapper">
-                            <div class="stat-number" data-target="400+">0</div>
-                        </div>
-                        <div class="stat-label">
-                            <h5 class="stats_h5">Lifetime Customers</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column 2 -->
-                <div class="col-md-3 col-6 stat-box">
-                    <div class="stat-item">
-                        <div class="stat-number-wrapper">
-                            <div class="stat-number" data-target="60+">0</div>
-                        </div>
-                        <div class="stat-label">
-                            <h5 class="stats_h5">Years of experience<br>in innovations</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column 3 -->
-                <div class="col-md-3 col-6 stat-box">
-                    <div class="stat-item">
-                        <div class="stat-number-wrapper">
-                            <div class="stat-number" data-target="200+">0</div>
-                        </div>
-                        <div class="stat-label p-0">
-                            <h5 class="stats_h5">Product Portfolio</h5>
-                        </div>
-                    </div>
-                </div>
-                <!-- Column 4 -->
-                <div class="col-md-3 col-6 stat-box">
-                    <div class="stat-item">
-                        <div class="stat-number stat_last" data-target="87%">0</div>
-                        <div class="stat-label">
-                            <h5 class="stats_h5">Client Retention Rate</h5>
-                        </div>
-                    </div>
-                </div>
+        
+        <div class="col-md-4 fade-in-up" data-delay="500">
+          <div class="service-card h-100">
+            <div class="icon-wrap mb-4">
+              <i class="fas fa-chart-bar"></i>
             </div>
+            <h4 class="mb-3">Growth Marketing</h4>
+            <p>Data-driven growth marketing to accelerate customer acquisition, boost engagement, and improve retention across channels.</p>
+            <ul class="service-list">
+              <li>Acquisition Strategy</li>
+              <li>Conversion Rate Optimization</li>
+              <li>Customer Journey Mapping</li>
+              <li>Analytics & Performance Tracking</li>
+            </ul>
+            <a href="#contact" class="btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Download Section -->
-    <section class="download py-5 gradient-primary text-white"
-        style="background-image: url('img/download_sec.jpeg'); background-size: cover; background-position: center;">
-        <div class="container h-100">
-            <div class="row align-items-center h-100">
-                <div class="col-lg-6 col-md-12  text-lg-start mb-lg-0">
-                    <h2 class="text-white display-5 mb-4 text-left download_text">Download our  <br> brochure to get <br>more insights</h2>
-                </div>
-                <div class="col-lg-6">
-                    <div class="banner-form download-form mx-auto">
-                        <div class="form-card bg-white">
-                            <h2 class="mb-3 text-dark">Download our brochure</h2>
-                            <form method="post" action="">
-                                <?php wp_nonce_field('form_submission_nonce', 'form_nonce'); ?>
-                                <div class="mb-3">
-                                    <input type="text" class="form-control" name="full_name" placeholder="Full Name *" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" name="email" placeholder="Email *" required>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control" name="phone_number" placeholder="Phone Number *" required>
-                                </div>
-                                <div class="button-container">
-                                    <button type="submit" name="submit"  class="downloadBtn btn btn-primary">Download</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Blog Section -->
+  <section id="blog" class="py-6">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h6 class="text-primary text-uppercase mb-3 fade-in">Insights</h6>
+          <h2 class="section-title mb-4 fade-in">Marketing Thought Leadership</h2>
+          <p class="lead fade-in">Discover the latest insights on marketing strategy, leadership, and growth</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact py-5 gradient-blue text-white" id="get_contact">
-        <div class="container">
-            <h3 class="text-center mb-3 contact_head">Become an Awnext partner
-                & enjoy exclusive benefits</h3>
-            <!-- <h4 class="text-center contact_h4 ">We should start the conversation</h4> -->
-
-            <div class="text-center mb-5">
-                <a href="tel:9226566851" class="btn btn-lg call-btn">Partner with Us</a>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 fade-in-up" data-delay="100">
+          <div class="blog-card h-100">
+            <div class="blog-img-wrap">
+              <img src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Scaling Marketing Operations" class="img-fluid">
+              <div class="blog-date">
+                <span>Oct 15, 2023</span>
+              </div>
             </div>
+            <div class="blog-content">
+              <div class="blog-category">Growth</div>
+              <h4 class="blog-title">Scaling Marketing Operations for High-Growth Companies</h4>
+              <p class="blog-excerpt">Learn how to build and scale marketing operations that support rapid business growth without sacrificing quality or results.</p>
+              <a href="blog1.html" class="btn-link">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 fade-in-up" data-delay="300">
+          <div class="blog-card h-100">
+            <div class="blog-img-wrap">
+              <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Data-Driven Marketing" class="img-fluid">
+              <div class="blog-date">
+                <span>Sep 22, 2023</span>
+              </div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-category">Strategy</div>
+              <h4 class="blog-title">The CMO's Guide to Data-Driven Marketing in 2023</h4>
+              <p class="blog-excerpt">Discover how leading marketing executives are leveraging data to drive better decision-making and marketing performance.</p>
+              <a href="#" class="btn-link">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 fade-in-up" data-delay="500">
+          <div class="blog-card h-100">
+            <div class="blog-img-wrap">
+              <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Marketing Team Leadership" class="img-fluid">
+              <div class="blog-date">
+                <span>Aug 10, 2023</span>
+              </div>
+            </div>
+            <div class="blog-content">
+              <div class="blog-category">Leadership</div>
+              <h4 class="blog-title">Building High-Performance Marketing Teams in a Hybrid World</h4>
+              <p class="blog-excerpt">Strategies for leading and developing marketing teams that deliver exceptional results, regardless of where they work.</p>
+              <a href="#" class="btn-link">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a href="#" class="btn btn-outline-light">View All Articles</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <hr class="my-3" style="background-color: white; border: none; height: 2px;">
-
-            <div class="row mt-4">
+  <!-- Contact Section -->
+  <section id="contact" class="py-6 bg-darker">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+          <h6 class="text-primary text-uppercase mb-3 fade-in">Get In Touch</h6>
+          <h2 class="section-title mb-4 fade-in">Ready to Transform Your Marketing?</h2>
+          <p class="lead fade-in">Schedule a consultation to discuss how I can help your business grow</p>
+        </div>
+      </div>
+      
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-5 fade-in-left">
+          <div class="contact-info">
+            <div class="contact-item mb-4">
+              <div class="icon-box mb-3">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h5>Email</h5>
+              <p><a href="mailto:akmal@example.com">akmal@example.com</a></p>
+            </div>
+            
+            <div class="contact-item mb-4">
+              <div class="icon-box mb-3">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <h5>Phone</h5>
+              <p><a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+            </div>
+            
+            <div class="contact-item mb-4">
+              <div class="icon-box mb-3">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h5>Location</h5>
+              <p>San Francisco, CA (Available Remotely)</p>
+            </div>
+            
+            <div class="social-links mt-5">
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-medium-m"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-7 fade-in-right">
+          <div class="contact-form-wrap">
+            <form id="contactForm" class="contact-form">
+              <div class="row g-4">
                 <div class="col-md-6">
-                    <h3 class="text-white contact_txt">
-                        Contact Us</h3>
-                    <address class="cont_add mt-4">
-                        <p>
-                            <i class="fas fa-map-marker-alt p-2"></i>
-                            Gat No. 519, Mulshi Road, Rihe Rd, Shelkewadi, Ghotawade, Pune, Maharashtra 412111
-                        </p>
-                        <p class="email-address">
-                            <a href="mailto:nandkishore@prabha-engg.com" class="email-link">
-                                <i class="fas fa-envelope p-2"></i>
-                                nandkishore@prabha-engg.com
-                            </a>
-                        </p>
-                        <p class="phone-number">
-                            <a href="tel:9226566851" class="phone-link">
-                                <i class="fas fa-phone p-2"></i>
-                                92265 66851
-                            </a>
-                        </p>
-                    </address>
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                  </div>
                 </div>
+                
                 <div class="col-md-6">
-                <div class="map-container">
-                    <!-- Placeholder Image -->
-                    <img src="img/map-placeholder.jpg" id="map-placeholder" alt="Map Loading..." width="100%" height="300">
-                    
-                    <!-- Google Map iframe (Initially hidden) -->
-                    <iframe id="google-map"
-                        src="" 
-                        width="100%" height="300" 
-                        style="border:0; display:none;"
-                        allowfullscreen="" loading="lazy">
-                    </iframe>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required>
+                  </div>
                 </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" class="form-control">
+                  </div>
                 </div>
-                <hr class="my-3 mt-4" style="background-color: white; border: none; height: 2px;">
-                <div class="container-fluid">
-                    <div class="d-flex justify-content-center">
-                        <div class="all-rights text-center pt-3">© 2025, Awnext by Prabha. All rights reserved.</div>
-                    </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control">
+                  </div>
                 </div>
-            </div>
+                
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="service">Interested Service</label>
+                    <select id="service" class="form-select">
+                      <option value="" selected disabled>Select a service</option>
+                      <option value="Marketing Strategy">Marketing Strategy</option>
+                      <option value="Team Leadership">Team Leadership</option>
+                      <option value="Growth Marketing">Growth Marketing</option>
+                      <option value="Other">Other/Not Sure</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" class="form-control" required></textarea>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                  <div id="formSuccess" class="alert alert-success mt-4" style="display: none;">
+                    Your message has been sent successfully. I'll get back to you soon!
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <a class="footer-brand mb-4" href="#hero">
+            <span class="logo-text">Fractional CMO</span>
+          </a>
+          <p class="mb-0">Fractional CMO services for growing businesses. Strategic marketing leadership without the full-time commitment.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <ul class="footer-links mb-4">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <p class="copyright">© 2023 Fractional CMO. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#hero" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/contact-form.js"></script>
 </body>
-
 </html>
