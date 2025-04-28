@@ -1,443 +1,954 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fractional CMO</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Component CSS -->
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/services.css">
-  <link rel="stylesheet" href="css/blog.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/animations.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akmal Billekar | Fractional CMO</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5E17EB;
+            --dark: #121212;
+            --teal: #2DD4BF;
+            --light-gray: #F3F4F6;
+            --gold: #FFD700;
+            --text-light: #FFFFFF;
+            --text-dark: #333333;
+            --section-padding: 5rem 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .btn {
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #4c13c9;
+            border-color: #4c13c9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(94, 23, 235, 0.2);
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: var(--text-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(94, 23, 235, 0.2);
+        }
+        
+        /* Header Styles */
+        .offer-banner {
+            background-color: var(--teal);
+            padding: 8px 0;
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .navbar {
+            background-color: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            color: var(--text-light);
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            margin: 0 10px;
+            position: relative;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--teal);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--teal);
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.8)),
+                        url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            padding: 8rem 0;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Clients Section */
+        .clients {
+            background-color: var(--light-gray);
+            padding: var(--section-padding);
+        }
+        
+        .client-logo {
+            height: 80px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: var(--section-padding);
+            background-color: var(--dark);
+            color: var(--text-light);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--teal);
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* About Section */
+        .about {
+            padding: var(--section-padding);
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            transition: transform 0.5s ease;
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        .expandable-text {
+            max-height: 200px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .expanded {
+            max-height: 1000px;
+        }
+        
+        .read-more {
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: var(--section-padding);
+            background-color: var(--light-gray);
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card .card-body {
+            padding: 2rem;
+        }
+        
+        .service-price {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .service-feature {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: start;
+        }
+        
+        .service-feature i {
+            color: var(--teal);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: var(--section-padding);
+        }
+        
+        .blog-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-card .card-body {
+            padding: 2rem;
+        }
+        
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: var(--section-padding);
+            background-color: var(--dark);
+            color: var(--text-light);
+        }
+        
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 10px;
+        }
+        
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-light);
+            padding: 12px 15px;
+            margin-bottom: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .contact-info {
+            padding-left: 2rem;
+        }
+        
+        .contact-info-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info-item i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: var(--teal);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: var(--text-light);
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0d0d0d;
+            padding: 2rem 0;
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-img {
+                margin-bottom: 2rem;
+            }
+            
+            .contact-info {
+                padding-left: 0;
+                margin-top: 3rem;
+            }
+        }
+    </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
-  <!-- Navigation -->
-  <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#hero">
-        <span class="logo-text">Fractional CMO</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <button class="btn-close d-lg-none" aria-label="Close menu" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"></button>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#hero">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-primary nav-btn" href="#contact">Schedule a Call</a>
-          </li>
-        </ul>
-      </div>
+<body>
+    <!-- Offer Banner -->
+    <div class="offer-banner text-center">
+        <div class="container">
+            <a href="audit.html" class="text-decoration-none text-dark">
+                <span>Digital Audit Pro - 50% OFF - Only Rs.149</span>
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 hero-content fade-in">
-          <h1 class="display-4 fw-bold mb-4">Grow Your Business With Strategic Marketing Leadership</h1>
-          <p class="lead mb-5">Expert CMO services without the full-time commitment. Drive results with data-driven strategies customized for your business goals.</p>
-          <div class="cta-group">
-            <a href="#contact" class="btn btn-primary btn-lg me-3 mb-3 mb-md-0">Let's Talk Strategy</a>
-            <a href="#services" class="btn btn-outline-light btn-lg">Explore Services</a>
-          </div>
+    
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Akmal Billekar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Insights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-lg-6 hero-image fade-in-right">
-          <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Strategic Marketing Leadership" class="img-fluid rounded-3 shadow-lg">
-        </div>
-      </div>
-    </div>
-    <div class="hero-shape"></div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-6">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 text-center">
-          <h6 class="text-primary text-uppercase mb-3 fade-in">About Me</h6>
-          <h2 class="section-title mb-4 fade-in">Delivering CMO-Level Expertise On Your Terms</h2>
-        </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-lg-5 mb-5 mb-lg-0 fade-in-left">
-          <div class="about-image-wrap">
-            <img src="https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Fractional CMO - Fractional CMO" class="img-fluid rounded-3 shadow-lg">
-          </div>
-        </div>
-        <div class="col-lg-7 fade-in-right">
-          <div class="about-content ps-lg-5">
-            <p class="lead mb-4">As a Fractional CMO with over 15 years of experience, I've helped businesses across tech, SaaS, e-commerce, and healthcare achieve sustainable growth through strategic marketing leadership.</p>
-            
-            <div class="row mb-4">
-              <div class="col-md-6">
-                <div class="feature-item mb-4">
-                  <div class="icon-box mb-3">
-                    <i class="fas fa-chart-line"></i>
-                  </div>
-                  <h5>Data-Driven Approach</h5>
-                  <p>Marketing decisions backed by analytics and performance metrics</p>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="mb-4 animate__animated animate__fadeInUp">360° Marketing Leadership to Transform Your Business Growth</h1>
+                    <p class="mb-5 animate__animated animate__fadeInUp animate__delay-1s">With 15+ years of industry experience, I provide strategic marketing leadership to elevate your brand positioning, optimize your marketing operations, and drive measurable business growth.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="#contact" class="btn btn-primary animate__animated animate__fadeInUp animate__delay-1s">Schedule a Free Strategy Session</a>
+                        <a href="#services" class="btn btn-outline-light animate__animated animate__fadeInUp animate__delay-2s">Explore My Services</a>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item mb-4">
-                  <div class="icon-box mb-3">
-                    <i class="fas fa-rocket"></i>
-                  </div>
-                  <h5>Growth Focused</h5>
-                  <p>Strategies designed to drive sustainable business expansion</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="mb-4">Trusted By</h2>
+                    <p class="text-muted">Partnering with leading brands across diverse industries</p>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item mb-4">
-                  <div class="icon-box mb-3">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <h5>Team Leadership</h5>
-                  <p>Experience managing and developing high-performing marketing teams</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-4 col-lg-2 mb-4 text-center">
+                    <div class="client-item">
+                        <img src="https://images.pexels.com/photos/3873197/pexels-photo-3873197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Retail Client" class="img-fluid client-logo">
+                        <p class="mt-2 mb-0">Retail</p>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item">
-                  <div class="icon-box mb-3">
-                    <i class="fas fa-globe"></i>
-                  </div>
-                  <h5>Industry Network</h5>
-                  <p>Connections with top agencies, specialists, and marketing vendors</p>
+                <div class="col-6 col-md-4 col-lg-2 mb-4 text-center">
+                    <div class="client-item">
+                        <img src="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="E-commerce Client" class="img-fluid client-logo">
+                        <p class="mt-2 mb-0">E-commerce</p>
+                    </div>
                 </div>
-              </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4 text-center">
+                    <div class="client-item">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Real Estate Client" class="img-fluid client-logo">
+                        <p class="mt-2 mb-0">Real Estate</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4 text-center">
+                    <div class="client-item">
+                        <img src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Education Client" class="img-fluid client-logo">
+                        <p class="mt-2 mb-0">Education</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4 text-center">
+                    <div class="client-item">
+                        <img src="https://images.pexels.com/photos/247763/pexels-photo-247763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Manufacturing Client" class="img-fluid client-logo">
+                        <p class="mt-2 mb-0">Manufacturing</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 mb-4 text-center">
+                    <div class="client-item">
+                        <img src="https://images.pexels.com/photos/4201651/pexels-photo-4201651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Automotive Client" class="img-fluid client-logo">
+                        <p class="mt-2 mb-0">Automotive</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="d-flex flex-wrap">
-              <a href="#services" class="btn btn-primary me-3 mb-3">View My Services</a>
-              <a href="#contact" class="btn btn-outline-light mb-3">Get In Touch</a>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <h3>Years Experience</h3>
+                        <p class="text-muted">Leading marketing initiatives for global brands</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">200+</div>
+                        <h3>Campaigns</h3>
+                        <p class="text-muted">Successfully launched and managed</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <div class="stat-number">30%</div>
+                        <h3>ROI Improvement</h3>
+                        <p class="text-muted">Average increase for client businesses</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-6 bg-darker">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 text-center">
-          <h6 class="text-primary text-uppercase mb-3 fade-in">Services</h6>
-          <h2 class="section-title mb-4 fade-in">Strategic Marketing Solutions</h2>
-          <p class="lead fade-in">Custom marketing leadership and execution to help you achieve your business goals</p>
-        </div>
-      </div>
-      
-      <div class="row g-4">
-        <div class="col-md-4 fade-in-up" data-delay="100">
-          <div class="service-card h-100">
-            <div class="icon-wrap mb-4">
-              <i class="fas fa-bullseye"></i>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <div class="about-img">
+                        <img src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Akmal Billekar" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="mb-4">About Me</h2>
+                    <p class="lead mb-4">I'm a seasoned marketing executive with a passion for transforming business growth through strategic marketing leadership.</p>
+                    <div class="expandable-text" id="about-text">
+                        <p>With over 15 years of experience across diverse industries, I specialize in bringing Fortune 500 marketing strategies to growth-stage companies. My approach combines data-driven decision making with creative storytelling to build memorable brands that resonate with target audiences.</p>
+                        <p>Throughout my career, I've helped businesses navigate digital transformation, build high-performance marketing teams, and implement integrated marketing strategies that drive measurable business results.</p>
+                        <p>As a Fractional CMO, I partner with organizations looking for senior marketing leadership without the full-time commitment or overhead. This arrangement provides my clients with strategic direction, marketing expertise, and hands-on support exactly when needed.</p>
+                        <p>My mission is to help ambitious businesses unlock their growth potential through marketing strategies that are both innovative and sustainable. I believe in creating marketing systems that continue delivering results long after our engagement ends.</p>
+                        <p>In addition to my client work, I regularly contribute to industry publications and speak at marketing conferences on topics ranging from marketing leadership to digital transformation.</p>
+                    </div>
+                    <div class="read-more mt-3" id="read-more">Read My Full Story <i class="fas fa-chevron-down ms-1"></i></div>
+                </div>
             </div>
-            <h4 class="mb-3">Marketing Strategy</h4>
-            <p>Comprehensive marketing strategy development aligned with your business objectives, from market positioning to channel selection and budget allocation.</p>
-            <ul class="service-list">
-              <li>Brand Positioning & Messaging</li>
-              <li>Go-to-Market Planning</li>
-              <li>Channel Strategy & Optimization</li>
-              <li>Budget Planning & ROI Tracking</li>
-            </ul>
-            <a href="#contact" class="btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
-          </div>
         </div>
-        
-        <div class="col-md-4 fade-in-up" data-delay="300">
-          <div class="service-card h-100">
-            <div class="icon-wrap mb-4">
-              <i class="fas fa-users-cog"></i>
-            </div>
-            <h4 class="mb-3">Team Leadership</h4>
-            <p>Executive leadership for your marketing department, including team building, process development, and performance management.</p>
-            <ul class="service-list">
-              <li>Marketing Team Assessment</li>
-              <li>Performance Management</li>
-              <li>Agency & Vendor Management</li>
-              <li>Process Optimization</li>
-            </ul>
-            <a href="#contact" class="btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
-          </div>
-        </div>
-        
-        <div class="col-md-4 fade-in-up" data-delay="500">
-          <div class="service-card h-100">
-            <div class="icon-wrap mb-4">
-              <i class="fas fa-chart-bar"></i>
-            </div>
-            <h4 class="mb-3">Growth Marketing</h4>
-            <p>Data-driven growth marketing to accelerate customer acquisition, boost engagement, and improve retention across channels.</p>
-            <ul class="service-list">
-              <li>Acquisition Strategy</li>
-              <li>Conversion Rate Optimization</li>
-              <li>Customer Journey Mapping</li>
-              <li>Analytics & Performance Tracking</li>
-            </ul>
-            <a href="#contact" class="btn-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section id="blog" class="py-6">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 text-center">
-          <h6 class="text-primary text-uppercase mb-3 fade-in">Insights</h6>
-          <h2 class="section-title mb-4 fade-in">Marketing Thought Leadership</h2>
-          <p class="lead fade-in">Discover the latest insights on marketing strategy, leadership, and growth</p>
-        </div>
-      </div>
-      
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6 fade-in-up" data-delay="100">
-          <div class="blog-card h-100">
-            <div class="blog-img-wrap">
-              <img src="https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Scaling Marketing Operations" class="img-fluid">
-              <div class="blog-date">
-                <span>Oct 15, 2023</span>
-              </div>
-            </div>
-            <div class="blog-content">
-              <div class="blog-category">Growth</div>
-              <h4 class="blog-title">Scaling Marketing Operations for High-Growth Companies</h4>
-              <p class="blog-excerpt">Learn how to build and scale marketing operations that support rapid business growth without sacrificing quality or results.</p>
-              <a href="blog1.html" class="btn-link">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 fade-in-up" data-delay="300">
-          <div class="blog-card h-100">
-            <div class="blog-img-wrap">
-              <img src="https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Data-Driven Marketing" class="img-fluid">
-              <div class="blog-date">
-                <span>Sep 22, 2023</span>
-              </div>
-            </div>
-            <div class="blog-content">
-              <div class="blog-category">Strategy</div>
-              <h4 class="blog-title">The CMO's Guide to Data-Driven Marketing in 2023</h4>
-              <p class="blog-excerpt">Discover how leading marketing executives are leveraging data to drive better decision-making and marketing performance.</p>
-              <a href="#" class="btn-link">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 fade-in-up" data-delay="500">
-          <div class="blog-card h-100">
-            <div class="blog-img-wrap">
-              <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Marketing Team Leadership" class="img-fluid">
-              <div class="blog-date">
-                <span>Aug 10, 2023</span>
-              </div>
-            </div>
-            <div class="blog-content">
-              <div class="blog-category">Leadership</div>
-              <h4 class="blog-title">Building High-Performance Marketing Teams in a Hybrid World</h4>
-              <p class="blog-excerpt">Strategies for leading and developing marketing teams that deliver exceptional results, regardless of where they work.</p>
-              <a href="#" class="btn-link">Read Article <i class="fas fa-arrow-right ms-2"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="row mt-5">
-        <div class="col-12 text-center">
-          <a href="#" class="btn btn-outline-light">View All Articles</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-6 bg-darker">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-lg-8 text-center">
-          <h6 class="text-primary text-uppercase mb-3 fade-in">Get In Touch</h6>
-          <h2 class="section-title mb-4 fade-in">Ready to Transform Your Marketing?</h2>
-          <p class="lead fade-in">Schedule a consultation to discuss how I can help your business grow</p>
-        </div>
-      </div>
-      
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-5 fade-in-left">
-          <div class="contact-info">
-            <div class="contact-item mb-4">
-              <div class="icon-box mb-3">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <h5>Email</h5>
-              <p><a href="mailto:akmal@example.com">akmal@example.com</a></p>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="mb-4">My Services</h2>
+                    <p class="text-muted">Tailored marketing solutions to address your specific business challenges</p>
+                </div>
             </div>
             
-            <div class="contact-item mb-4">
-              <div class="icon-box mb-3">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <h5>Phone</h5>
-              <p><a href="tel:+15555555555">+1 (555) 555-5555</a></p>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Marketing Foundation Package</h3>
+                            <div class="service-price mb-3">Rs. 75,000</div>
+                            <p><span class="badge bg-primary mb-3">4 Weeks</span></p>
+                            <p class="card-text mb-4">A comprehensive marketing foundation for businesses looking to establish or refine their marketing strategy and systems.</p>
+                            
+                            <h5 class="mb-3">What's Included:</h5>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Complete marketing audit and competitive analysis</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Brand positioning and messaging framework</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Customer persona development</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>90-day marketing roadmap with actionable tasks</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>KPI framework and measurement plan</div>
+                            </div>
+                            
+                            <div class="mt-4 pt-2 border-top">
+                                <h5 class="mb-3">Success Story:</h5>
+                                <p><em>"The marketing foundation package helped us clarify our positioning and create a structured approach to our marketing efforts. Within 3 months, we saw a 45% increase in qualified leads." — E-commerce Client</em></p>
+                            </div>
+                            
+                            <a href="#contact" class="btn btn-primary mt-4">Schedule a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Marketing Team Builder</h3>
+                            <div class="service-price mb-3">Rs. 125,000</div>
+                            <p><span class="badge bg-primary mb-3">6 Weeks</span></p>
+                            <p class="card-text mb-4">Build and train a high-performance marketing team that can execute your marketing strategy efficiently.</p>
+                            
+                            <h5 class="mb-3">What's Included:</h5>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Marketing team structure design</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Role definition and job descriptions</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Recruitment support and candidate evaluation</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Onboarding and training program development</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Team performance measurement frameworks</div>
+                            </div>
+                            
+                            <div class="mt-4 pt-2 border-top">
+                                <h5 class="mb-3">Success Story:</h5>
+                                <p><em>"Akmal helped us hire and structure our marketing team from scratch. His process saved us countless hours and helped us avoid expensive hiring mistakes." — Real Estate Developer</em></p>
+                            </div>
+                            
+                            <a href="#contact" class="btn btn-primary mt-4">Schedule a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Growth Accelerator Retainer</h3>
+                            <div class="service-price mb-3">Rs. 60,000/month</div>
+                            <p><span class="badge bg-primary mb-3">3-12 Month Commitment</span></p>
+                            <p class="card-text mb-4">Ongoing marketing leadership and strategic guidance to drive sustained business growth.</p>
+                            
+                            <h5 class="mb-3">What's Included:</h5>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Monthly strategic planning and review sessions</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Hands-on marketing team leadership (8-12 hours/week)</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Campaign development and optimization</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Marketing technology selection and implementation</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Performance reporting and growth recommendations</div>
+                            </div>
+                            
+                            <div class="mt-4 pt-2 border-top">
+                                <h5 class="mb-3">Success Story:</h5>
+                                <p><em>"During our 6-month retainer, we were able to increase our conversion rates by 28% and reduce our customer acquisition cost by 35%." — SaaS Company</em></p>
+                            </div>
+                            
+                            <a href="#contact" class="btn btn-primary mt-4">Schedule a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4">Brand Development Intensive</h3>
+                            <div class="service-price mb-3">Rs. 150,000</div>
+                            <p><span class="badge bg-primary mb-3">8 Weeks</span></p>
+                            <p class="card-text mb-4">Comprehensive brand development and positioning to differentiate your business in the marketplace.</p>
+                            
+                            <h5 class="mb-3">What's Included:</h5>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Brand strategy and positioning workshop</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Visual identity development (logo, color palette, typography)</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Brand messaging and voice guidelines</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Brand story and narrative development</div>
+                            </div>
+                            <div class="service-feature">
+                                <i class="fas fa-check-circle"></i>
+                                <div>Brand implementation plan across all touchpoints</div>
+                            </div>
+                            
+                            <div class="mt-4 pt-2 border-top">
+                                <h5 class="mb-3">Success Story:</h5>
+                                <p><em>"Our rebrand transformed how customers perceive our company. We're now able to command premium pricing and have seen a 40% increase in inbound inquiries." — Manufacturing Business</em></p>
+                            </div>
+                            
+                            <a href="#contact" class="btn btn-primary mt-4">Schedule a Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="mb-4">Marketing Insights</h2>
+                    <p class="text-muted">Strategies, tactics, and thought leadership for modern marketers</p>
+                </div>
             </div>
             
-            <div class="contact-item mb-4">
-              <div class="icon-box mb-3">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <h5>Location</h5>
-              <p>San Francisco, CA (Available Remotely)</p>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-card card h-100">
+                        <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar me-1"></i> May 15, 2025</span>
+                                <span class="ms-3"><i class="far fa-clock me-1"></i> 8 min read</span>
+                            </div>
+                            <h3 class="card-title mb-3">Building a High-Performance Marketing Team on a Budget</h3>
+                            <p class="card-text">Discover practical strategies for assembling and motivating a marketing team that delivers exceptional results without breaking the bank.</p>
+                            <a href="blog1.html" class="btn btn-outline-primary mt-3">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-card card h-100">
+                        <img src="https://images.pexels.com/photos/905873/pexels-photo-905873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar me-1"></i> April 28, 2025</span>
+                                <span class="ms-3"><i class="far fa-clock me-1"></i> 10 min read</span>
+                            </div>
+                            <h3 class="card-title mb-3">Integrating Digital and Traditional Marketing: A 360° Approach</h3>
+                            <p class="card-text">Learn how to create a cohesive marketing strategy that leverages the strengths of both digital and traditional channels for maximum impact.</p>
+                            <a href="blog2.html" class="btn btn-outline-primary mt-3">Read Article</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="blog-card card h-100">
+                        <img src="https://images.pexels.com/photos/7567434/pexels-photo-7567434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar me-1"></i> April 10, 2025</span>
+                                <span class="ms-3"><i class="far fa-clock me-1"></i> 6 min read</span>
+                            </div>
+                            <h3 class="card-title mb-3">Marketing Metrics That Matter: Beyond Vanity Metrics</h3>
+                            <p class="card-text">Explore the key performance indicators that truly reflect marketing effectiveness and how to build a measurement framework focused on business outcomes.</p>
+                            <a href="blog3.html" class="btn btn-outline-primary mt-3">Read Article</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="social-links mt-5">
-              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-medium-m"></i></a>
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="p-4 rounded-3" style="background-color: var(--light-gray);">
+                        <h4 class="mb-3">Get My Free Marketing Resources</h4>
+                        <p class="mb-4">Download my collection of marketing templates, checklists, and frameworks to accelerate your marketing efforts.</p>
+                        <a href="#" class="btn btn-primary">Access Free Resources</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        
-        <div class="col-lg-7 fade-in-right">
-          <div class="contact-form-wrap">
-            <form id="contactForm" class="contact-form">
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" class="form-control" required>
-                  </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 mx-auto text-center">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    <p class="text-muted">Ready to transform your marketing approach? Let's discuss your business goals.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <select class="form-control" required>
+                                        <option value="" selected disabled>Estimated Budget</option>
+                                        <option value="50-100k">Rs. 50,000 - 100,000</option>
+                                        <option value="100-250k">Rs. 100,000 - 250,000</option>
+                                        <option value="250-500k">Rs. 250,000 - 500,000</option>
+                                        <option value="500k+">Rs. 500,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <select class="form-control" required>
+                                        <option value="" selected disabled>Biggest Challenge</option>
+                                        <option value="strategy">Marketing Strategy</option>
+                                        <option value="branding">Branding & Positioning</option>
+                                        <option value="leads">Lead Generation</option>
+                                        <option value="team">Team Building</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <select class="form-control" required>
+                                    <option value="" selected disabled>Timeline</option>
+                                    <option value="immediate">Immediate (Next 30 Days)</option>
+                                    <option value="1-3months">1-3 Months</option>
+                                    <option value="3-6months">3-6 Months</option>
+                                    <option value="exploring">Just Exploring</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Schedule My Strategy Session</button>
+                        </form>
+                    </div>
                 </div>
                 
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-control" required>
-                  </div>
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5 class="mb-2">Email</h5>
+                                <p class="mb-0">akmal@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h5 class="mb-2">Phone</h5>
+                                <p class="mb-0">+91 9876543210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5 class="mb-2">Location</h5>
+                                <p class="mb-0">Bangalore, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h5 class="mb-3">Connect With Me</h5>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-upwork"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" class="form-control">
-                  </div>
-                </div>
-                
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" class="form-control">
-                  </div>
-                </div>
-                
-                <div class="col-12">
-                  <div class="form-group">
-                    <label for="service">Interested Service</label>
-                    <select id="service" class="form-select">
-                      <option value="" selected disabled>Select a service</option>
-                      <option value="Marketing Strategy">Marketing Strategy</option>
-                      <option value="Team Leadership">Team Leadership</option>
-                      <option value="Growth Marketing">Growth Marketing</option>
-                      <option value="Other">Other/Not Sure</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div class="col-12">
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="4" class="form-control" required></textarea>
-                  </div>
-                </div>
-                
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
-                  <div id="formSuccess" class="alert alert-success mt-4" style="display: none;">
-                    Your message has been sent successfully. I'll get back to you soon!
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <a class="footer-brand mb-4" href="#hero">
-            <span class="logo-text">Fractional CMO</span>
-          </a>
-          <p class="mb-0">Fractional CMO services for growing businesses. Strategic marketing leadership without the full-time commitment.</p>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Akmal Billekar. All Rights Reserved.</p>
         </div>
-        <div class="col-md-6 text-md-end">
-          <ul class="footer-links mb-4">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <p class="copyright">© 2023 Fractional CMO. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <a href="#hero" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Main JS -->
-  <script src="js/main.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/smooth-scroll.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/contact-form.js"></script>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Sticky Navbar
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('.navbar').css('box-shadow', '0 5px 15px rgba(0, 0, 0, 0.1)');
+                } else {
+                    $('.navbar').css('box-shadow', 'none');
+                }
+            });
+            
+            // Smooth scrolling
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                
+                var target = this.hash;
+                var $target = $(target);
+                
+                $('html, body').animate({
+                    'scrollTop': $target.offset().top - 70
+                }, 800, 'swing');
+            });
+            
+            // Read More functionality
+            $('#read-more').on('click', function() {
+                $('#about-text').toggleClass('expanded');
+                if ($('#about-text').hasClass('expanded')) {
+                    $(this).html('Read Less <i class="fas fa-chevron-up ms-1"></i>');
+                } else {
+                    $(this).html('Read My Full Story <i class="fas fa-chevron-down ms-1"></i>');
+                }
+            });
+            
+            // Form submission (placeholder)
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you shortly.');
+                this.reset();
+            });
+            
+            // Animation on scroll for elements
+            $(window).scroll(function() {
+                $('.service-card, .blog-card, .stat-item').each(function() {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (scroll > position - windowHeight + 200) {
+                        $(this).addClass('animated');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
